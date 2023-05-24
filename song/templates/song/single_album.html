@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Songs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'song/album-single.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+
+</head>
+
+<body>
+        <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+            <img class="title_of_author" src="{% static 'song/images/album_titulo.png' %}" alt="" draggable="false">
+        </header>
+
+        <section>
+            <a href="{{album.spotify_link}}">
+                <img src="{{album.photo}}">
+                <h1>{{album.album_Name}}</h1>
+            </a>
+        </section>
+
+        <div class="container_for_albums">
+
+        {% for song in album.songs.all %}
+        <div class="album">
+            <a href="{{ song.spotify }}">
+                <h1>{{ forloop.counter }}.{{ song }}</h1>
+                <h1>{{ song.lengths }}</h1>
+            </a>
+        </div>
+        {% endfor %}
+        </div>
+</body>
+</html>

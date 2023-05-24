@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+    <link rel="stylesheet" href="{% static 'song/home.css' %}">
+</head>
+<body>
+        <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+        </header>
+
+        <section>
+            <a class="link" href="{% url 'song:album' %}">
+                <img class="album_label" src="{% static 'song/images/album_titulo.png' %}" alt="" draggable="false">
+            </a>
+
+            <a class="link" href="{% url 'song:songs' %}">
+                <img class="cancion_label" src="{% static 'song/images/canciones_texto.png' %}" alt="" draggable="false">
+            </a>
+
+             <a class="link" href="{% url 'song:author' %}">
+                <img class="artistas_label" src="{% static 'song/images/artistas_logo.png' %}" alt="" draggable="false">
+             </a>
+        </section>
+
+         <img class="ilustracion_uno" src="{% static 'song/images/mac_miller.png' %}" alt="" draggable="false">
+         <img class="ilustracion_dos" src="{% static 'song/images/cantante2.png' %}" alt="" draggable="false">
+
+
+</body>
+</html>
+
+
+

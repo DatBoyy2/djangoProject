@@ -1,0 +1,36 @@
+.author_image{
+width: 500px;
+height: 500px;
+position: absolute;
+left: 60%;
+top: 380px;
+}
+
+section{
+height: 500px;
+width: 800px;
+position: absolute;
+left: 175px;
+top: 380px;
+border-style: solid;
+border-width: 2px;
+overflow: auto;
+}
+
+section p {
+margin: 15px;
+}
+
+.logo{
+height: 250px;
+position: relative;
+top: -35px;
+}
+
+
+.title_of_author{
+position: absolute;
+left: 25%;
+height: 275px;
+top: 7%;
+}

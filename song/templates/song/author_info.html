@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Author Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'song/single_author_page.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+
+</head>
+<body>
+
+    <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+        <img class="title_of_author" src="{% static 'song/images/artistas_logo.png' %}" alt="" draggable="false">
+
+    </header>
+    <section>
+            <p>{{author.biography}}</p>
+    </section>
+    <img class="author_image" src="{{author.photo}}" alt="" draggable="false">
+
+</body>
+</html>

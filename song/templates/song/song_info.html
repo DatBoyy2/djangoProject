@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Info</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'song/song_info.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+
+</head>
+<body>
+
+    <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+        <img class="title_of_author" src="{% static 'song/images/letras_titulo.png' %}" alt="" draggable="false">
+    </header>
+
+    <div class="lyrics_div_content">
+        <pre>{{song.lyrics}}</pre>
+    </div>
+
+    <section>
+        <a class="spotiy_linkn "href="{{song.spotify}}">
+        <img class="image_slider" src="{{song.photo}}" alt="" draggable="false"></a>
+        <h1>{{song.song_name}}</h1>
+        </a>
+    </section>
+
+</body>
+</html>

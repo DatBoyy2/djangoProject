@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title_of_author{
+position: absolute;
+left: 33%;
+height: 235px;
+top: 15%;
+}
+
+.logo{
+height: 250px;
+position: relative;
+top: -35px;
+}
+
+.songs_images{
+position: relative;
+left: 23%;
+height: 450px;
+width: 450px;
+}
+
+section{
+position: absolute;
+left: 595px;
+top: 355px;
+width: 800px;
+}
+
+section h1{
+text-align: center;
+padding-top: 25px;
+font-size: 65px;
+padding-bottom: 125px;
+text-transform: uppercase;
+}

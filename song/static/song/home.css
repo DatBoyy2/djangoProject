@@ -1,0 +1,49 @@
+.logo{
+height: 250px;
+position: relative;
+top: -35px;
+}
+
+.title_of_author{
+position: absolute;
+left: 25%;
+height: 275px;
+top: 15%;
+}
+
+section{
+height: 350px;
+display: flex;
+gap: 25px;
+justify-content: center;
+align-items: center;
+}
+
+.cancion_label{
+height: 140px;
+}
+
+.album_label{
+height: 140px;
+
+
+}
+
+.artistas_label{
+height: 140px;
+}
+
+.ilustracion_uno{
+position: absolute;
+right: 150px;
+top: -100px;
+}
+
+.ilustracion_dos{
+position: absolute;
+bottom: 25px;
+left: 125px;
+}
+.link{
+z-index: 15;
+}

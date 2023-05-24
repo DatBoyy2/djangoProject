@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'song/album.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+</head>
+
+<body>
+        <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+        </header>
+
+        <section>
+            <img class="title_of_author" src="{% static 'song/images/album_titulo.png' %}" alt="" draggable="false">
+        </section>
+        <div class="wrapper">
+        <div class="carousel">
+
+            {% for album in albums%}
+            <a class="image_link"href="{% url 'song:album_info' album.id %}"><img class="image_slider" src="{{album.photo}}" alt="" draggable="false"></a>
+            {% endfor %}
+
+
+        </div>
+
+            <i id="left" class="fa-solid fa-angle-left">
+                <img class="left_arrow_icon" src="{% static 'song/images/flecha-correcta.png' %}" alt="" draggable="false">
+
+            </i>
+            <i id="right" class="fa-solid fa-angle-right">
+                <img class="right_arrow_icon" src="{% static 'song/images/flecha-correcta.png' %}" alt="" draggable="false">
+            </i>
+
+    </div>
+</body>
+    <script src="{% static 'song/slider.js' %}"></script>
+</html>

@@ -1,0 +1,66 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title_of_author{
+position: absolute;
+left: 30%;
+height: 235px;
+top: 8%;
+}
+
+.logo{
+height: 295px;
+position: relative;
+top: -75px;
+}
+
+section{
+position: absolute;
+left: 125px;
+width: 420px;
+height: 600px;
+}
+
+section a{
+text-decoration: none;
+color: black;
+text-transform: uppercase;
+}
+
+section img {
+height: 420px;
+width: 420px;
+}
+
+section h1{
+text-decoration: none;
+text-align: center;
+padding-top: 15px;
+}
+
+.container_for_albums{
+  height: 600px;
+  width: 1100px;
+  position: absolute;
+  left: 35%;
+  top: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-x: auto;
+
+  max-height: 600px;
+}
+
+.album{
+  width: calc(100% / 2);
+  padding: 10px;
+}
+
+.album a{
+text-decoration: none;
+color: black;
+}

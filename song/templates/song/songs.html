@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Songs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'song/songs.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'song/images/music.png' %}">
+
+
+</head>
+
+<body>
+        <header>
+            <a href="{% url 'song:index' %}">
+                <img class="logo" src="{% static 'song/images/logo_guillem.png' %}" alt="" draggable="false">
+            </a>
+            <img class="title_of_author" src="{% static 'song/images/canciones_texto.png' %}" alt="" draggable="false">
+
+        </header>
+
+        <section>
+                {% for song in songs %}
+                <a class="image_link"href="{% url 'song:song_info' song.id %}"><img class="songs_images" src="{{song.photo}}" alt="" draggable="false"></a>
+                <h1>{{song.song_name}}</h1>
+                {% endfor %}
+        </section>
+
+</body>
+</html>
